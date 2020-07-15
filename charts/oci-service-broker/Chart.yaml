@@ -8,3 +8,7 @@ name: oci-service-broker
 version: 1.4.1
 appVersion: 0.1.0
 home: https://github.com/oracle/oci-service-broker
+maintainers:
+  - name: Adao Junior
+    email: no-reply@oracle.com
+    url: https://github.com/junior/
