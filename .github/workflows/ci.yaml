@@ -15,7 +15,6 @@ jobs:
         uses: helm/chart-testing-action@master
         env:
           CT_CHECK_VERSION_INCREMENT: "false"
-          CHECK_VERSION_INCREMENT: "false"
         with:
           command: lint
           config: .github/ct.yaml
