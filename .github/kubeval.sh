@@ -9,7 +9,7 @@ SCHEMA_LOCATION="https://raw.githubusercontent.com/instrumenta/kubernetes-json-s
 curl --silent --show-error --fail --location --output /tmp/kubeval.tar.gz https://github.com/instrumenta/kubeval/releases/download/"${KUBEVAL_VERSION}"/kubeval-linux-amd64.tar.gz
 tar -xf /tmp/kubeval.tar.gz kubeval
 
-# validate charts
+# validate charts removed --ignore-missing-schemas
 for CHART_DIR in ${CHART_DIRS}; do
-  helm template --values "${CHART_DIR}"/ci/ci-values.yaml "${CHART_DIR}" | ./kubeval --strict --ignore-missing-schemas --kubernetes-version "${KUBERNETES_VERSION#v}" --schema-location "${SCHEMA_LOCATION}"
+  helm template --values "${CHART_DIR}"/ci/ci-values.yaml "${CHART_DIR}" | ./kubeval --strict --kubernetes-version "${KUBERNETES_VERSION#v}" --schema-location "${SCHEMA_LOCATION}"
 done
