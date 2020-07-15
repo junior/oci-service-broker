@@ -1,0 +1,7 @@
+image:
+  repository: iad.ocir.io/oracle/oci-service-broker
+  tag: 1.4.0
+storage:
+    useEmbedded: true
+tls:
+  enabled: false
