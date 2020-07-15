@@ -28,6 +28,20 @@ jobs:
 #      - name: Run helm-docs
 #        run: .github/helm-docs.sh
 
+  deprecation-check:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@master
+        - name: curl
+          uses: wei/curl@master
+          with:
+            args: https://raw.githubusercontent.com/naquada/deprek8/master/policy/deprek8.rego > /github/home/deprek8.rego
+        - name: Check helm chart for deprecation
+          uses: instrumenta/conftest-action/helm@master
+          with:
+            chart: nginx-test
+            policy: /github/home/deprek8.rego
+  
   kubeval-chart:
     runs-on: ubuntu-latest
     needs:
