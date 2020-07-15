@@ -94,7 +94,7 @@
         - [Sample files](docs/adw.md#sample-files)
       - [Provisioning](docs/adw.md#provisioning)
         - [Creating a new ADW Instance](docs/adw.md#creating-a-new-adw-instance)
-        - [Using Existing ADW Instance](docs/adw.md#using-an-existing-adw-instance)   
+        - [Using Existing ADW Instance](docs/adw.md#using-an-existing-adw-instance)
         - [Get instance status](docs/adw.md#get-instance-status)  
       - [Binding](docs/adw.md#binding)
         - [Creating an ADW ServiceBinding resource](docs/adw.md#creating-an-adw-servicebinding-resource)
@@ -110,8 +110,8 @@
     - [Introduction](docs/oss.md#introduction)
     - [Plans](docs/oss.md#plans)
     - [Service Provision Request Parameters](docs/oss.md#service-provision-request-parameters)
-        - [Creating a OSS Service Instance](docs/oss.md#creating-a-new-oss-instance)
-        - [Using Existing OSS Service Instance](docs/oss.md#using-an-existing-oss-service-instance)
+      - [Creating a OSS Service Instance](docs/oss.md#creating-a-new-oss-instance)
+      - [Using Existing OSS Service Instance](docs/oss.md#using-an-existing-oss-service-instance)
     - [Service Binding](docs/oss.md#service-binding)
       - [Request Parameters](docs/oss.md#request-parameters)
       - [Response Credentials](docs/oss.md#response-credentials)
@@ -130,4 +130,3 @@ The OCI Service Broker is an open source implementation of [Open service broker 
 - Provide OOTB implementations for common OCI services.
 - OCI Service Broker Installation.
 - [Using an Existing Service Instance](docs/services.md#using-an-existing-service-instance)
- 
