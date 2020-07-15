@@ -14,7 +14,7 @@ image:
   repository: iad.ocir.io/oracle/oci-service-broker
 
   # Tag of the image
-  tag:  1.4.0
+  tag: 1.4.0
 
   # The image pull policy
   pullPolicy: Always
@@ -48,7 +48,7 @@ storage:
     # "Never", and "Always"
     imagePullPolicy: Always
     # Configure the comma separated etcd server URLs here
-    servers: 
+    servers:
     # Configure tls related parameters below
     tls:
       # Set to true if tls needs to be used to talk to the etcd server
@@ -57,9 +57,9 @@ storage:
       # etcd-client-ca.crt - SSL Certificate Authority file used to secure etcd communication.
       # etcd-client.crt - SSL certification file used to secure etcd communication.
       # etcd-client.key - SSL key file used to secure etcd communication.
-      clientCertSecretName: 
+      clientCertSecretName:
 
-# Any key value pair under the serviceTags section will be added as tags in the 
+# Any key value pair under the serviceTags section will be added as tags in the
 serviceTags:
   # It is recommended to set the ClusterId as this will be tagged in the services
   # created by OCI Service Broker. In case of Oracle Clusters(OKE), the ClusterId
@@ -67,7 +67,7 @@ serviceTags:
   # ClusterId:
 
 # TLS related parameters
-tls: 
+tls:
   # Change this parameter to true if the Broker needs to be TLS enabled
   enabled: true
   # The Kubernetes secret which contains the PKCS#12 file and password required to configure TLS
