@@ -67,6 +67,15 @@ jobs:
         uses: helm/kind-action@master
         with:
           node_image: kindest/node:${{ matrix.k8s }}
+      - name: Create dummy credential secret
+        run: |
+          kubectl create secret generic oci-credentials \
+          --from-literal=tenancy=ocid1.tenancy.oc1..aaaa... \
+          --from-literal=user=ocid1.user.oc1..aaaa... \
+          --from-literal=region=us-ashburn-1 \
+          --from-literal=fingerprint=00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:f0 \
+          --from-literal=passphrase=changeme \
+          --from-file=privatekey=.github/ct.yaml
       - name: Run chart-testing (install)
         uses: helm/chart-testing-action@master
         with:
