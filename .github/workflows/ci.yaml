@@ -39,7 +39,7 @@ jobs:
         - name: Check helm chart for deprecation
           uses: instrumenta/conftest-action/helm@master
           with:
-            chart: nginx-test
+            chart: charts/
             policy: /github/home/deprek8.rego
   
   kubeval-chart:
