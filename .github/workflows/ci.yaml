@@ -39,7 +39,7 @@ jobs:
         - name: Check helm chart for deprecation
           uses: instrumenta/conftest-action/helm@master
           with:
-            chart: charts/
+            chart: charts/oci-service-broker/
             policy: /github/home/deprek8.rego
   
   kubeval-chart:
